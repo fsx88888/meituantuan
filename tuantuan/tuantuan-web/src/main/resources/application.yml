@@ -1,0 +1,13 @@
+server:
+  port: 8091   
+spring:     #定义springmvc视图解析器
+  mvc:    view:      prefix: /WEB-INF/views/
+      suffix: .jsp
+dubbo:
+  scan:
+    basePackages: com.tt #包扫描
+  application:
+    name: provider-user #定义服务名称
+  registry:
+    address: zookeeper://zookeeper://176.201.107.202:2181?backup=176.201.107.200:2181,176.201.107.201:2181
+ 
